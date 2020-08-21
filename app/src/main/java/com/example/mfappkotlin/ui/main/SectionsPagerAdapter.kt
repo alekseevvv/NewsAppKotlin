@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.mfappkotlin.Fragment.ChannelFragment
-import com.example.mfappkotlin.ui.main.PlaceholderFragment
 
 private val TAB_TITLES = arrayOf(
         R.string.tab_text_1,
@@ -26,7 +25,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
         var frag :Fragment = ChannelFragment()
         when (position) {
             0 -> frag = ChannelFragment()
-            1 ->"asdf"
+            1 ->frag = ChannelFragment()
             2 ->"jk;"
         }
         return frag

@@ -1,6 +1,7 @@
 package com.example.mfappkotlin.Api
 
 import com.example.mfappkotlin.Model.NewsModel
+import com.example.mfappkotlin.Model.Source
 import io.reactivex.Single
 import okhttp3.Response
 import retrofit2.http.GET
@@ -25,6 +26,10 @@ interface NewsApi {
     @GET("/v2/top-headlines")
     fun getTopHeadlines(
         @Query("country") country : String,
+        @Query("apiKey") apiKey : String ): Single<NewsModel>
+
+    @GET("/v2/sources")
+    fun getSource(
         @Query("apiKey") apiKey : String ): Single<NewsModel>
 
 }

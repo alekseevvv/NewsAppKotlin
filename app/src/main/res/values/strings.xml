@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">MfAppKotlin</string>
-    <string name="tab_text_1">CHANEL</string>
-    <string name="tab_text_2">FAVORITES</string>
-    <string name="tab_text_3">SEARCH</string>
+    <string name="app_name">NewsApp</string>
+    <string name="tab_text_1">Chanel</string>
+    <string name="tab_text_2">Favorites</string>
+    <string name="tab_text_3">Search</string>
+    <string name="int_desc">Internet disconnected</string>
+    <string name="add">Added</string>
+    <string name="del">Deleted</string>
+    <string name="notfound">Not found</string>
+    <string name="empty">List is empty</string>
+
+
 </resources>

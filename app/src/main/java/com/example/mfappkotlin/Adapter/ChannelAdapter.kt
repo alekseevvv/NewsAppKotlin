@@ -5,10 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mfappkotlin.Model.Article
+import com.example.mfappkotlin.Model.Source
 import com.example.mfappkotlin.R
 import kotlinx.android.synthetic.main.channel_item.view.*
 
-class ChannelAdapter(val newsList: ArrayList<Article>) :
+class ChannelAdapter(val newsList: ArrayList<Source>) :
 
     RecyclerView.Adapter<ChannelAdapter.HomePageViewHolder>() {
     class HomePageViewHolder(var view: View) : RecyclerView.ViewHolder(view) {
@@ -25,25 +26,30 @@ class ChannelAdapter(val newsList: ArrayList<Article>) :
     }
 
     override fun onBindViewHolder(holder: HomePageViewHolder, position: Int) {
-        holder.view.source.text =  newsList[position].title
+        holder.view.source.text =  newsList[position].name
         holder.view.desc.text = newsList[position].description
+        println("Вывод")
+        println(newsList[position].name)
+        println(newsList[position].description)
       //  holder.view.homePageImageView.downloadFromUrl(newsList[position].urlToImage, placeHolderProgressBar(holder.view.context))
 
-        var people=newsList[position].url
+       /* var people=newsList[position].url
         var title=newsList[position].title
         var date =newsList[position].publishedAt
         var news =newsList[position].content
         var image=newsList[position].urlToImage
-
+*/
         holder.view.setOnClickListener {
 
         }
     }
 
-    fun updateCountryList(newCountryList: List<Article>) {
+
+    fun updateCountryList(newCountryList: List<Source>) {
         newsList.clear()
         newsList.addAll(newCountryList)
         notifyDataSetChanged()
+
     }
 
 }

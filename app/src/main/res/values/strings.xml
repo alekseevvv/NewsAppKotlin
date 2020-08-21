@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MfAppKotlin</string>
+    <string name="tab_text_1">CHANEL</string>
+    <string name="tab_text_2">FAVORITES</string>
+    <string name="tab_text_3">SEARCH</string>
 </resources>

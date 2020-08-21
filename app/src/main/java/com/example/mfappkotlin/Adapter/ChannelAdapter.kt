@@ -25,8 +25,8 @@ class ChannelAdapter(val newsList: ArrayList<Article>) :
     }
 
     override fun onBindViewHolder(holder: HomePageViewHolder, position: Int) {
-        holder.view.homePageTitleTextView.text =  newsList[position].title
-        holder.view.homePageContentTextView.text = newsList[position].description
+        holder.view.source.text =  newsList[position].title
+        holder.view.desc.text = newsList[position].description
       //  holder.view.homePageImageView.downloadFromUrl(newsList[position].urlToImage, placeHolderProgressBar(holder.view.context))
 
         var people=newsList[position].url
@@ -40,14 +40,10 @@ class ChannelAdapter(val newsList: ArrayList<Article>) :
         }
     }
 
-
     fun updateCountryList(newCountryList: List<Article>) {
-
-
         newsList.clear()
         newsList.addAll(newCountryList)
         notifyDataSetChanged()
-
     }
 
 }

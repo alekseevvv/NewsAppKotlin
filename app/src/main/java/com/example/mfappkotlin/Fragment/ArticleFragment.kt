@@ -1,6 +1,5 @@
-@file:Suppress("DEPRECATION")
-
 package com.example.mfappkotlin.Fragment
+
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,24 +10,29 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mfappkotlin.Adapter.ChannelAdapter.ChannelAdapter
+import com.example.mfappkotlin.Adapter.ArticleAdapter
 import com.example.mfappkotlin.HViewModel
 import com.example.mfappkotlin.R
 import kotlinx.android.synthetic.main.fragment_main.*
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import org.ocpsoft.prettytime.PrettyTime;
 
-class ChannelFragment : Fragment() {
+import java.util.*
+
+class ArticleFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ChannelFragment()
+        fun newInstance() = ArticleFragment()
     }
 
     private lateinit var viewModel: HViewModel
-    val newsAdapter = ChannelAdapter(arrayListOf())
+    val newsAdapter = ArticleAdapter(arrayListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(requireActivity()).get(HViewModel::class.java)
-        viewModel.getSourceApı()
+        viewModel.getArticleApı()
 
     }
 
@@ -50,10 +54,10 @@ class ChannelFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.sour.observe(viewLifecycleOwner, Observer { sour ->
-            sour?.let {
+        viewModel.news.observe(viewLifecycleOwner, Observer { news ->
+            news?.let {
                 recyclerView.visibility = View.VISIBLE
-                newsAdapter.updateCountryList(sour)
+                newsAdapter.updateCountryList(news)
             }
         })
     }
@@ -66,4 +70,5 @@ class ChannelFragment : Fragment() {
             )
         )
     }
+
 }

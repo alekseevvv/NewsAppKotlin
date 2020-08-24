@@ -28,9 +28,6 @@ class ChannelAdapter(val newsList: ArrayList<Source>) :
     override fun onBindViewHolder(holder: HomePageViewHolder, position: Int) {
         holder.view.source.text =  newsList[position].name
         holder.view.desc.text = newsList[position].description
-        println("Вывод")
-        println(newsList[position].name)
-        println(newsList[position].description)
       //  holder.view.homePageImageView.downloadFromUrl(newsList[position].urlToImage, placeHolderProgressBar(holder.view.context))
 
        /* var people=newsList[position].url

@@ -49,7 +49,6 @@ class ChannelAdapter(val newsList: ArrayList<Source>) :
         newsList.clear()
         newsList.addAll(newCountryList)
         notifyDataSetChanged()
-
     }
 
 }

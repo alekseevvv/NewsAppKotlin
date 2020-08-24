@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.example.mfappkotlin.Api.NewsAPIService
 import com.example.mfappkotlin.Model.Article
 import com.example.mfappkotlin.Model.Source
+import com.example.mfappkotlin.Model.Sources
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -30,7 +31,9 @@ class HViewModel : ViewModel() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                     {
-                        news.value = it.source
+                        news.value = it.sources
+                        println("Вывод")
+                        println(it.sources)
                         Log.d("API", it.toString())
                     },
                     {

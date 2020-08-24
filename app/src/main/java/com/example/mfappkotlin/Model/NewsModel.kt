@@ -10,7 +10,5 @@ data class NewsModel(
     @SerializedName("status")
     val status: String,
     @SerializedName("totalResults")
-    val totalResults: Int,
-    @SerializedName("source")
-    val source: List<Source>
+    val totalResults: Int
 )

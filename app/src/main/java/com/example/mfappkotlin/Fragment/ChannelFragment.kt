@@ -50,7 +50,7 @@ class ChannelFragment : Fragment() {
     }
 
 
-    fun observeLiveData() {
+    private fun observeLiveData() {
         viewModel.news.observe(viewLifecycleOwner, Observer { news ->
             news?.let {
                 recyclerView.visibility = View.VISIBLE
@@ -62,7 +62,7 @@ class ChannelFragment : Fragment() {
 
     }
 
-    fun recyclerLine() {
+    private fun recyclerLine() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(
                 recyclerView.context,

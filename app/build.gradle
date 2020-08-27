@@ -81,4 +81,9 @@ dependencies {
     //Times Formater
     implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
 
+    //DB
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+    implementation 'androidx.work:work-runtime:2.1.0'
+
 }

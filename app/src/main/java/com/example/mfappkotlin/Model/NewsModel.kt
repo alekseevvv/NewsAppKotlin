@@ -1,7 +1,7 @@
 package com.example.mfappkotlin.Model
 
 
-import com.example.mfappkotlin.Model.Article
+import com.example.mfappkotlin.DB.Article
 import com.google.gson.annotations.SerializedName
 
 data class NewsModel(

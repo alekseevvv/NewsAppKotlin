@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mfappkotlin.Api.API_KEY
 import com.example.mfappkotlin.Api.NewsAPIService
-import com.example.mfappkotlin.Model.Article
+import com.example.mfappkotlin.DB.Article
 import com.example.mfappkotlin.Model.Source
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

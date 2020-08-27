@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mfappkotlin.Model.Article
 import com.example.mfappkotlin.Model.Source
 import com.example.mfappkotlin.R
 import kotlinx.android.synthetic.main.channel_item.view.*
